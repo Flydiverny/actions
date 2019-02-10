@@ -1,5 +1,5 @@
 FROM quay.io/helmpack/chart-testing:v2.2.0
-LABEL "name"="chart-releaser action"
+LABEL "name"="chart-testing action"
 LABEL "maintainer"="Markus Maga <markus@maga.se>"
 LABEL "version"="1.0"
 
