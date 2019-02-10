@@ -1,5 +1,5 @@
 #!/bin/bash
-set -euo pipefail
+set -eo pipefail
 
 if [[ ! -z "$TOKEN" ]]; then
 	GITHUB_TOKEN=$TOKEN
