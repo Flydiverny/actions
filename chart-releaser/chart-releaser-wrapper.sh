@@ -1,7 +1,7 @@
 #!/bin/bash
 set -eo pipefail
 
-if [[ ! -z "$TOKEN" ]]; then
+if [[ -n "$TOKEN" ]]; then
 	GITHUB_TOKEN=$TOKEN
 fi
 
@@ -16,8 +16,10 @@ if [[ -z "$GITHUB_REPOSITORY" ]]; then
 fi
 
 args=$*
-set -- $(echo $GITHUB_REPOSITORY | tr '/' ' ')
+# shellcheck disable=SC2046
+set -- $(echo "$GITHUB_REPOSITORY" | tr '/' ' ')
 owner=$1
 repo=${2:-''}
 
+# shellcheck disable=SC2086
 "/bin/chart-releaser" $args -r "$repo" -o "$owner" -t "$GITHUB_TOKEN"

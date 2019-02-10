@@ -1,8 +1,8 @@
 FROM flydiverny/chart-releaser:latest
 LABEL "maintainer"="Markus Maga <markus@maga.se>"
 
-LABEL "com.github.actions.name"="Chart Releaser"
-LABEL "com.github.actions.description"="Write arguments to the standard output"
+LABEL "com.github.actions.name"="Helm Chart Releaser"
+LABEL "com.github.actions.description"="Runs helm chart releaser, automatically setting repo, owner & token"
 LABEL "com.github.actions.icon"="mic"
 LABEL "com.github.actions.color"="blue"
 
