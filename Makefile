@@ -1,5 +1,5 @@
 export ROOT_DIR=$(CURDIR)
-export DOCKER_REPO=
+export DOCKER_REPO=flydiverny
 
 MODULES=$(dir $(wildcard */Makefile))
 
